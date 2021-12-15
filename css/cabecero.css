@@ -401,7 +401,7 @@ main{top: 14vh;}
  
 
  
-.boton-subir,
+/*.boton-subir,
 .politicas-cookie{
  position: fixed;
  z-index: 100000;
@@ -445,4 +445,4 @@ main{top: 14vh;}
 }
 .boton-cookie:hover{
  background: #F95977;
-}
+}*/

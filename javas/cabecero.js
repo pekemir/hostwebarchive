@@ -227,7 +227,7 @@ function abrircompeticiones(posicion){
 	
 
 
-//POLÍTICA DE COOKIES
+/*//POLÍTICA DE COOKIES
 //Evento clic de la etiqueta con la clase (.js-boton-cookie)
 $('.js-boton-cookie').click(function() {
 	//Almaceno los datos en localStorage (clave, valor)
@@ -246,6 +246,6 @@ $('.js-boton-cookie').click(function() {
    }else{//De lo contrario muestro la información
 	//$('.politicas-cookie').css('display', 'block');
 $('.politicas-cookie').css('display', 'none');//quitar esto para que se vea
-   }
+   }*/
   
   
