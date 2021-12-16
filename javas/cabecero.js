@@ -269,7 +269,23 @@ $('.politicas-cookie').css('display', 'none');//quitar esto para que se vea
    const switchh=document.getElementById("switchid");
    const switchh1=document.getElementById("switchid1");
    dataLayer = [];
-   
+   function mostrarcookies(){
+	   scrollX=0;
+	avisoCookies.classList.add('activo');
+	fondoAvisoCookies.classList.add('activo');
+	if (localStorage.getItem('no-mostrar')) {
+		switchh.checked=true;	}
+	else{switchh.checked=false;};
+	if (localStorage.getItem('cookies-aceptadas')) {
+		switchh1.checked=true;	}
+	else{switchh1.checked=false;}
+	localStorage.removeItem('cookies-aceptadas');
+	localStorage.removeItem('no-mostrar');
+	
+
+
+	
+   }
    if(!localStorage.getItem('no-mostrar')){
 	   avisoCookies.classList.add('activo');
 	   fondoAvisoCookies.classList.add('activo');
@@ -299,7 +315,7 @@ $('.politicas-cookie').css('display', 'none');//quitar esto para que se vea
    botonAceptarCookies2.addEventListener('click', () => {
 	   avisoCookies.classList.remove('activo');
 	   fondoAvisoCookies.classList.remove('activo');
-   avisoCookies2.classList.remove('activo');
+  		 avisoCookies2.classList.remove('activo');
 	   localStorage.setItem('cookies-aceptadas', true);
 	   localStorage.setItem('no-mostrar',true);
 	   dataLayer.push({'event': 'cookies-aceptadas'});
@@ -312,12 +328,17 @@ $('.politicas-cookie').css('display', 'none');//quitar esto para que se vea
    
    if(switchh.checked){
 	   
-	   localStorage.setItem('no-mostrar',true);};
+	   localStorage.setItem('no-mostrar',true);}
+	   else{
+	   localStorage.removeItem('no-mostrar');};
    
    if(switchh1.checked){
 	   
 	   localStorage.setItem('cookies-aceptadas', true);
-   dataLayer.push({'event': 'cookies-aceptadas'});};
+   dataLayer.push({'event': 'cookies-aceptadas'});}
+   else{
+	localStorage.removeItem('cookies-aceptadas');
+   };
 	   
 	   
 	   
