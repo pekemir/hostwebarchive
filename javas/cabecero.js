@@ -224,6 +224,12 @@ function abrircompeticiones(posicion){
 		location.href='equipo.html?var1='+numeroequipo;
 	  
 	  }
+	  
+	function irainicio(){
+	
+		location.href='index.html'
+	  
+	  }
 	
 
 
