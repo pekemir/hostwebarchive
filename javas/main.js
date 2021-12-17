@@ -10,7 +10,7 @@ const titul22=document.getElementById('indexcontenedor1contenedorimagentitulo2')
 const boton2=document.getElementById('indexcontenedor1contenedorimagenboton');
 const relleno=document.getElementById('relleno');
 let intervalo;
-const requestURL = 'https://hockeysalduie78.es/noticias.json';
+const requestURL = 'https://www.hockeysalduie78.es/noticias.json';
 const request = new XMLHttpRequest();
 var cantidaddenoticias;
 var noticiass=null;
