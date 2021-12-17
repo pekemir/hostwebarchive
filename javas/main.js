@@ -1,3 +1,8 @@
+const requestURL = 'https://pekemir.github.io/noticias.json';
+  /*  const requestURL = 'https://www.hockeysalduie78.es/noticias.json';*/
+  const requestURL2 = 'https://pekemir.github.io/New4.json';
+  /*  const requestURL2 = 'https://www.hockeysalduie78.es/New4.json';*/
+
 const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
 let posicionActual = 0;
 const imagen = document.getElementById('indexcontenedor1contenedorimagenimagen');
@@ -10,7 +15,7 @@ const titul22=document.getElementById('indexcontenedor1contenedorimagentitulo2')
 const boton2=document.getElementById('indexcontenedor1contenedorimagenboton');
 const relleno=document.getElementById('relleno');
 let intervalo;
-const requestURL = 'https://www.hockeysalduie78.es/noticias.json';
+
 const request = new XMLHttpRequest();
 var cantidaddenoticias;
 var noticiass=null;
@@ -411,7 +416,7 @@ function irasegunboton(){
 var basepartidos;
 var keyCount;
 function ponerproximospartidos() {
-const requestURL2 = 'https://pekemir.github.io/New4.json';
+
 const request2 = new XMLHttpRequest();
 
 request2.open('GET', requestURL2);

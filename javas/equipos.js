@@ -2,6 +2,7 @@
   
     
     const requestURL = 'https://pekemir.github.io/equipo.json';
+     /*  const requestURL = 'https://www.hockeysalduie78.es/equipo.json';*/
     const request = new XMLHttpRequest();
     const contenedortitulo = document.getElementById("tituloequipo");
     const fondoequipo=document.getElementById('imagenequipo');

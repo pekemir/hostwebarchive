@@ -1,6 +1,8 @@
   const header = document.querySelector('header');
     const section = document.querySelector('section');
     const requestURL = 'https://pekemir.github.io/new1.json';
+
+    /*  const requestURL2 = 'https://www.hockeysalduie78.es/New4.json';*/
     const request = new XMLHttpRequest();
     var seleccion1;
     var seleccion2;

@@ -4,6 +4,7 @@ var max;
     const header = document.querySelector('header');
     const section = document.querySelector('section');
     const requestURL = 'https://pekemir.github.io/noticias.json';
+      /*  const requestURL = 'https://www.hockeysalduie78.es/noticias.json';*/
     const request = new XMLHttpRequest();
     const myH1=document.getElementById('h1primeranoticia2');
     const contenedortexto = document.getElementById("contenedorparatexto");

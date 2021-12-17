@@ -1,6 +1,8 @@
 const header = document.querySelector('header');
     const section = document.querySelector('section');
     const requestURL = 'https://pekemir.github.io/noticias.json';
+  /*  const requestURL = 'https://www.hockeysalduie78.es/noticias.json';*/
+
     const request = new XMLHttpRequest();
     var valorinicio;
     var cantidaddenoticias;

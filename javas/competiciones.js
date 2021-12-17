@@ -1,3 +1,7 @@
+const requestURL = 'https://pekemir.github.io/New4.json';
+/*  const requestURL = 'https://www.hockeysalduie78.es/New4.json';*/
+const requestURL2 = 'https://pekemir.github.io/New4.json';
+/*  const requestURL2 = 'https://www.hockeysalduie78.es/New4.json';*/
 var numnoticia;
 var max;
 var numerocontrolador;
@@ -58,7 +62,7 @@ switch (numero) {
 }
 }
     
-    const requestURL = 'https://pekemir.github.io/New4.json';
+  
     const request = new XMLHttpRequest();
     var valorinicio;
     var cantidaddenoticias;
@@ -395,7 +399,7 @@ switch (numero) {
     var basepartidos;
 var keyCount;
 function ponerproximospartidos() {
-  const requestURL2 = 'https://pekemir.github.io/New4.json';
+ 
   const request2 = new XMLHttpRequest();
   
   request2.open('GET', requestURL2);
