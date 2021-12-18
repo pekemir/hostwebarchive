@@ -16,7 +16,7 @@ const boton2=document.getElementById('indexcontenedor1contenedorimagenboton');
 const relleno=document.getElementById('relleno');
 let intervalo;
 
-const request = new XMLHttpRequest();
+
 var cantidaddenoticias;
 var noticiass=null;
 var IMAGENES;
@@ -78,6 +78,7 @@ function iniciopatallagrande(){
     stopIntervalo(intervalo);
     posicionActual = 0;
     console.log("grande");
+    const request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -259,7 +260,7 @@ function renderizarImagen () {
          
         }  
 function cargarimagenesnoticiasonload(){
-   
+    const request = new XMLHttpRequest();
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
