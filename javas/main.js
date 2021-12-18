@@ -16,7 +16,7 @@ const boton2=document.getElementById('indexcontenedor1contenedorimagenboton');
 const relleno=document.getElementById('relleno');
 let intervalo;
 
-
+const request = new XMLHttpRequest();
 var cantidaddenoticias;
 var noticiass=null;
 var IMAGENES;
