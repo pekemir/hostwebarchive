@@ -5,7 +5,7 @@ const section = document.querySelector('section');
 var controlpagina=0;
 var cantidaddenoticias;
 const datal=JSON.stringify( datas);
-const noticias2 = JSON.parse(datal);
+const noticias22 = JSON.parse(datal);
 const noticias;
 var noticiasmostradas=4;
 const myH1=document.getElementById('h1primeranoticia');
