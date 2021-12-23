@@ -6,7 +6,7 @@ var controlpagina=0;
 var cantidaddenoticias;
 const datal=JSON.stringify( datas);
 const noticias22 = JSON.parse(datal);
-const noticias;
+var noticias;
 var noticiasmostradas=4;
 const myH1=document.getElementById('h1primeranoticia');
       const myH2=document.getElementById('h1segundanoticia');
@@ -29,6 +29,7 @@ $(document).ready( function () {
     showNoticias(1);
      });
 function consultalistData(numero) {
+
       $.ajax({
         url: 'https://hockeysalduie78.es/pagina2.php',
         type: 'POST',
