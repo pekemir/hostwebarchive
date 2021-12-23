@@ -6,6 +6,7 @@ var controlpagina=0;
 var cantidaddenoticias;
 const datal=JSON.stringify( datas);
 const noticias2 = JSON.parse(datal);
+const noticias;
 var noticiasmostradas=4;
 const myH1=document.getElementById('h1primeranoticia');
       const myH2=document.getElementById('h1segundanoticia');
@@ -36,9 +37,8 @@ function consultalistData(numero) {
         
         success: function(data){
           console.log(data);
-        const noticias = JSON.parse(data);
-           console.log(pacientes);
-          
+        const noticias4= JSON.parse(data);
+         noticias=noticias4;
          
         }
       })
