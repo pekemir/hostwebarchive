@@ -6,7 +6,7 @@ var controlpagina=0;
 var cantidaddenoticias;
 const datal=JSON.stringify( datas);
 const noticias22 = JSON.parse(datal);
-var noticias;
+const noticias= null;
 var noticiasmostradas=4;
 const myH1=document.getElementById('h1primeranoticia');
       const myH2=document.getElementById('h1segundanoticia');
