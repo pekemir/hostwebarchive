@@ -8,6 +8,7 @@ const datal=JSON.stringify( datas);
 const noticias22 = JSON.parse(datal);
 var noticias= null;
 var noticiasmostradas=4;
+var noticiaquequieromostrar=0;
 const myH1=document.getElementById('h1primeranoticia');
       const myH2=document.getElementById('h1segundanoticia');
       const myH3=document.getElementById('h1terceranoticia');
@@ -25,7 +26,7 @@ const myH1=document.getElementById('h1primeranoticia');
       const fondo3=document.getElementById('terceranoticia');
       const fondo4=document.getElementById('cuartanoticia');
 $(document).ready( function () {
-    console.log("ready");
+    console.log(noticiaquequieromostrar+"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
     
     showNoticias(1);
      });
@@ -102,7 +103,9 @@ function consultalistData(numero) {
 
         var noticiaid=noticias.Noticias[posicion].id;
         console.log("id"+noticiaid);
+        console.log(noticiaquequieromostrar+"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
         location.href='noticia.html?var1='+noticiaid;
+
       
       }
       function primerapagina(){
