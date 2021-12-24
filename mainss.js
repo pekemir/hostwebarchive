@@ -58,7 +58,7 @@ function consultalistData(numero) {
        function nname () {cantidaddenoticias=noticias.Noticias[0].total;
         console.log("cantidad de noticias total es: "+cantidaddenoticias);
           
-            console.log(datas);
+            
             console.log(noticias);
             var mydiv=document.getElementById('inicioarticuloclass');
             mydiv.scrollTop=0;

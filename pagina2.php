@@ -40,7 +40,7 @@ $noticias['Noticias'][] = $noticia;
 //consultanoticias
 $pr = $db->prepare("SELECT id,titulo, noticiacorta, imagenes, fecha FROM noticiasweb WHERE id<=? ORDER BY id DESC LIMIT 4");
 $numeromax=(($respuesta-1)*4);
-if ($cantidadnoticias<$numeromax) {
+if ($cantidadnoticias<=$numeromax) {
   $id=4;
 
 } else {
