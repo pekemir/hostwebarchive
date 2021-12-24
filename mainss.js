@@ -44,11 +44,6 @@ function consultalistData(numero) {
          
         }
       })
-    }
-      function showNoticias(numero) {
-        consultalistData(numero);
-/*if numero=1 se muestran: cantidad de noticias existentes que hay desde el final
-  si numero =2 o mas se muestran:cantidad de noticias existentes que hay desde el final -4xnumero-1*/
       cantidaddenoticias=noticias.Noticias[0].total;
       console.log("cantidad de noticias total es: "+cantidaddenoticias);
         
@@ -58,6 +53,12 @@ function consultalistData(numero) {
           var mydiv=document.getElementById('inicioarticuloclass');
           mydiv.scrollTop=0;
           llenarnoticias();
+    }
+      function showNoticias(numero) {
+        consultalistData(numero);
+/*if numero=1 se muestran: cantidad de noticias existentes que hay desde el final
+  si numero =2 o mas se muestran:cantidad de noticias existentes que hay desde el final -4xnumero-1*/
+     
        }
 /*Muestra las 4 noticias*/
        function llenarnoticias() {
