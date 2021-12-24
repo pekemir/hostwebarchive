@@ -40,16 +40,18 @@ function consultalistData(numero) {
           console.log(data);
         const noticias4= JSON.parse(data);
          noticias=noticias4;
+         console.log(noticias);
          
         }
       })
     }
       function showNoticias(numero) {
+        consultalistData(numero);
 /*if numero=1 se muestran: cantidad de noticias existentes que hay desde el final
   si numero =2 o mas se muestran:cantidad de noticias existentes que hay desde el final -4xnumero-1*/
       cantidaddenoticias=noticias.Noticias[0].total;
       console.log("cantidad de noticias total es: "+cantidaddenoticias);
-         consultalistData(numero);
+        
          console.log(datas);
           console.log(noticias);
           controlpagina=numero;
