@@ -25,6 +25,7 @@ const myH1=document.getElementById('h1primeranoticia');
       const fondo3=document.getElementById('terceranoticia');
       const fondo4=document.getElementById('cuartanoticia');
 $(document).ready( function () {
+    console.log("ready");
     
     showNoticias(1);
      });
@@ -101,7 +102,7 @@ function consultalistData(numero) {
 
         var noticiaid=noticias.Noticias[posicion].id;
         console.log("id"+noticiaid);
-        /* location.href='noticia.html?var1='+noticiaid;*/
+        location.href='noticia.html?var1='+noticiaid;
       
       }
       function primerapagina(){
