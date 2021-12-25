@@ -76,11 +76,13 @@ function consultanoticia(numero) {
         
       
        console.log(valorinicio);
-        max=noticias.length;
-         //array de imagenes
        
+         //array de imagenes
+       console.log("aqui");
             var ruta='url(imagenes/noticias/'+ noticias.Noticias.imagenes+')';
+            console.log(ruta);
            IMAGENES[0]=ruta;
+           console.log(ruta);
            fondo1.style.backgroundImage=ruta;
        
 
@@ -108,6 +110,7 @@ function consultanoticia(numero) {
          
           mypp1.textContent = noticias.Noticias.fecha;
           var ruta="url(imagenes/noticias/"+ noticias.Noticias.imagenes+".jpg)";
+          console.log(ruta);
           fondo1.style.backgroundImage=ruta;
           if (IMAGENES.length>1) {
               interval=16000/IMAGENES.length;
