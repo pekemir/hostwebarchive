@@ -78,7 +78,8 @@ function consultanoticia(numero) {
        console.log(valorinicio);
        
          //array de imagenes
-       console.log(noticias.Noticias.imagenes);
+         var imgs=noticias.Noticias[0].imagenes.split(',');
+         console.log(imgs);
             var ruta='url(imagenes/noticias/'+ noticias.Noticias[0].imagenes+')';
             console.log(ruta);
            IMAGENES[0]=ruta;
