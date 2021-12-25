@@ -87,19 +87,19 @@ function consultanoticia(numero) {
        
 
         
-        myH1.textContent = noticias.Noticias.titulo;
+        myH1.textContent = noticias.Noticias[0].titulo;
           
          
-          myp1.textContent = noticias.Noticias.noticiaentera;
+          myp1.textContent = noticias.Noticias[0].noticiaentera;
 
 
          
           var enlace;
-        if (noticias.Noticias.enlaces!="") {
+        if (noticias.Noticias[0].enlaces!="") {
 
           var parrafo = document.createElement("a");
           parrafo.className="p1noticias";
-          enlace=noticias.Noticias.enlaces;
+          enlace=noticias.Noticias[0].enlaces;
           parrafo.href=enlace;
           parrafo.innerHTML=enlace;
         contenedortexto.appendChild(parrafo);
@@ -108,8 +108,8 @@ function consultanoticia(numero) {
          	
           
          
-          mypp1.textContent = noticias.Noticias.fecha;
-          var ruta="url(imagenes/noticias/"+ noticias.Noticias.imagenes+".jpg)";
+          mypp1.textContent = noticias.Noticias[0].fecha;
+          var ruta="url(imagenes/noticias/"+ noticias.Noticias[0].imagenes+".jpg)";
           console.log(ruta);
           fondo1.style.backgroundImage=ruta;
           if (IMAGENES.length>1) {
