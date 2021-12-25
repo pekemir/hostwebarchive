@@ -104,8 +104,9 @@ function consultalistData(numero) {
         var noticiaid=noticias.Noticias[posicion].id;
         console.log("id"+noticiaid);
         noticiaquequieromostrar=noticiaid;
+        
         console.log(noticiaquequieromostrar+"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
-        location.href='noticia.html?var1='+noticiaid;
+        location.href='noticia.html>noticia='+noticiaid;
 
       
       }
