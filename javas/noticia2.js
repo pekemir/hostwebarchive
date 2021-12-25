@@ -79,12 +79,14 @@ function consultanoticia(numero) {
        
          //array de imagenes
          var imgs=noticias.Noticias[0].imagenes.split(',');
-         console.log(imgs);
-            var ruta='url(imagenes/noticias/'+ noticias.Noticias[0].imagenes+')';
-            console.log(ruta);
-           IMAGENES[0]=ruta;
-           console.log(ruta);
-           fondo1.style.backgroundImage=ruta;
+         for (let index = 0; index < imgs.length; index++) {
+          var ruta='url(imagenes/noticias/'+ imgs[index]+')';
+          console.log(ruta);
+          IMAGENES[0]=ruta;
+          fondo1.style.backgroundImage=ruta;
+         }
+        
+           
        
 
         
