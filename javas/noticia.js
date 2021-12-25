@@ -3,9 +3,6 @@ var numnoticia;
 var max;
     const header = document.querySelector('header');
     const section = document.querySelector('section');
-    const requestURL = 'https://pekemir.github.io/noticias.json';
-      /*  const requestURL = 'https://www.hockeysalduie78.es/noticias.json';*/
-    const request = new XMLHttpRequest();
     const myH1=document.getElementById('h1primeranoticia2');
     const contenedortexto = document.getElementById("contenedorparatexto");
       
@@ -26,11 +23,10 @@ var noticiass=null;
 var IMAGENES=[];
 var noticias=null;
 var valorinicio;
+var numerodenoticia;
 
 window.onload = function getGET()
-{
-   
-    // capturamos la url
+{ // capturamos la url
     var loc = document.location.href;
     console.log(loc);
     // si existe el interrogante
@@ -42,85 +38,67 @@ window.onload = function getGET()
         // obtenemos un array con cada clave=valor
         var GET = getString.split('&');
         console.log(GET);
-      
-        var get = {};
+        var tmp = GET[0].split('=');
+        numnoticia=tmp[1];     
+        console.log(numnoticia);
         // recorremos todo el array de valores
-        for(var i = 0, l = GET.length; i < l; i++){
-            var tmp = GET[i].split('=');
-               numnoticia=tmp[1];     
-            console.log(tmp[1]);
-           var numnoticia2= numnoticia.replace("#","")
-            console.log(numnoticia2);
-            numnoticia=numnoticia2;
-            console.log("aora");
-            request.open('GET', requestURL);
-            request.responseType = 'json';
-            request.send();
-            request.onload = function() {
-            const superNoticias = request.response;
-            noticiass=superNoticias;    
-            var numero=parseInt(numnoticia, 10);
-            console.log(numero);
-            console.log(numnoticia+"holaaaaa");
-            showNoticia(numnoticia);}
-        }
-        return get;
-        
-       
-    }
-    
+       numerodenoticia=numnoticia;
+       consultanoticia(numerodenoticia);
+
+            
+    }else{location.href='noticias.html';}
+   
 }
     
+function consultanoticia(numero) {
+  $.ajax({
+    url: 'https://hockeysalduie78.es/php/noticia.php',
+    type: 'POST',
+    data: "nombre=5&pagina="+numero,
     
+    
+    success: function(data){
+      console.log(data);
+      const noticias4 = JSON.parse(data);
+      noticias=noticias4;
+      console.log(noticias);
+      
+     showNoticia(numero);
+    }
+  })
+} 
     
    
 
     function showNoticia(numero) {
        
        valorinicio=numero;
-        noticias = noticiass['noticias'];
-       console.log(noticias.length);
-       console.log(valorinicio);
-        max=noticias.length;
-         //array de imagenes
-        for (let index = 0; index < noticias[valorinicio].imagenes.length; index++) {
-            var ruta='url(imagenes/noticias/'+ noticias[valorinicio].imagenes[index]+'.jpg)';
-           IMAGENES[index]=ruta;
-           fondo1.style.backgroundImage=ruta;
-        };
-
         
-        myH1.textContent = noticias[valorinicio].titulo;
-          
-          console.log(noticias[valorinicio].textolargo.length);
-          myp1.textContent = noticias[valorinicio].textolargo[0];
-
-console.log(noticias[valorinicio].textolargo);
-          for (let index = 1; index < noticias[valorinicio].textolargo.length; index++) {
-            var parrafo = document.createElement("p");
-          parrafo.className="p1noticias";
-          parrafo.textContent=noticias[valorinicio].textolargo[index];
-          contenedortexto.appendChild(parrafo);
-              console.log(noticias[valorinicio].textolargo[index]);
-              
-          }; 
-          var enlace;
-
-        for (let inn = 0; inn < noticias[valorinicio].enlace.length; inn++) {
-            console.log(noticias[valorinicio].enlace[inn]);
-            var parrafo = document.createElement("a");
-            parrafo.className="p1noticias";
-            enlace=noticias[valorinicio].enlace[inn];
-            parrafo.href=enlace;
-            parrafo.innerHTML=enlace;
-          contenedortexto.appendChild(parrafo);
-        };
-         	
-          
-         
-          mypp1.textContent = noticias[valorinicio].fecha;
-          var ruta="url(imagenes/noticias/"+ noticias[valorinicio].imagen+".jpg)";
+      
+       console.log(valorinicio);
+       
+         //array de imagenes
+         var imgs=noticias.Noticias[0].imagenes.split(',');
+         for (let index = 0; index < imgs.length; index++) {
+          var ruta='url(imagenes/noticias/'+ imgs[index]+')';
+          console.log(ruta);
+          IMAGENES[index]=ruta;
           fondo1.style.backgroundImage=ruta;
+         }
+         myH1.textContent = noticias.Noticias[0].titulo;
+          myp1.textContent = noticias.Noticias[0].noticiaentera;
+var enlace;
+        if (noticias.Noticias[0].enlaces!="") {
+var parrafo = document.createElement("a");
+          parrafo.className="p1noticias";
+          enlace=noticias.Noticias[0].enlaces;
+          parrafo.href=enlace;
+          parrafo.innerHTML=enlace;
+        contenedortexto.appendChild(parrafo);
+        }
+          mypp1.textContent = noticias.Noticias[0].fecha;
+          
+          fondo1.style.backgroundImage=IMAGENES[0];
           if (IMAGENES.length>1) {
               interval=16000/IMAGENES.length;
               if (interval<4000) {interval=4000;
@@ -143,7 +121,7 @@ console.log(noticias[valorinicio].textolargo);
         
         }
         function renderizarImagen () {
-           
+           console.log("cambio");
             $imagen.style.backgroundImage = IMAGENES[posicionActual];
             
            
