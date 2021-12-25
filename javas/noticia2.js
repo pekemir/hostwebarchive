@@ -85,36 +85,20 @@ function consultanoticia(numero) {
           IMAGENES[0]=ruta;
           fondo1.style.backgroundImage=ruta;
          }
-        
-           
-       
-
-        
-        myH1.textContent = noticias.Noticias[0].titulo;
-          
-         
+         myH1.textContent = noticias.Noticias[0].titulo;
           myp1.textContent = noticias.Noticias[0].noticiaentera;
-
-
-         
-          var enlace;
+var enlace;
         if (noticias.Noticias[0].enlaces!="") {
-
-          var parrafo = document.createElement("a");
+var parrafo = document.createElement("a");
           parrafo.className="p1noticias";
           enlace=noticias.Noticias[0].enlaces;
           parrafo.href=enlace;
           parrafo.innerHTML=enlace;
         contenedortexto.appendChild(parrafo);
         }
-
-         	
-          
-         
           mypp1.textContent = noticias.Noticias[0].fecha;
-          var ruta="url(imagenes/noticias/"+ noticias.Noticias[0].imagenes+")";
-          console.log(ruta);
-          fondo1.style.backgroundImage=ruta;
+          
+          fondo1.style.backgroundImage=IMAGENES[0];
           if (IMAGENES.length>1) {
               interval=16000/IMAGENES.length;
               if (interval<4000) {interval=4000;
