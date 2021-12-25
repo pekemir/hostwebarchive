@@ -82,7 +82,7 @@ function consultanoticia(numero) {
          for (let index = 0; index < imgs.length; index++) {
           var ruta='url(imagenes/noticias/'+ imgs[index]+')';
           console.log(ruta);
-          IMAGENES[0]=ruta;
+          IMAGENES[index]=ruta;
           fondo1.style.backgroundImage=ruta;
          }
          myH1.textContent = noticias.Noticias[0].titulo;
