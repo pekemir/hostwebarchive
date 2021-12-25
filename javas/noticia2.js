@@ -44,11 +44,11 @@ window.onload = function getGET()
         // recorremos todo el array de valores
        numerodenoticia=numnoticia;
        numerodenoticia=5;
-       consultanoticia(numerodenoticia);
+      
 
             
     }else{location.href='noticias.html';}
-   
+    consultanoticia(numerodenoticia);
 }
     
 function consultanoticia(numero) {
