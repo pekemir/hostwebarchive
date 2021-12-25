@@ -43,6 +43,7 @@ window.onload = function getGET()
         console.log(numnoticia);
         // recorremos todo el array de valores
        numerodenoticia=numnoticia;
+       numerodenoticia=numerodenoticia+0;
        consultanoticia(numerodenoticia);
 
             
