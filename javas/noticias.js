@@ -33,7 +33,7 @@ $(document).ready( function () {
 function consultalistData(numero) {
 
       $.ajax({
-        url: 'https://hockeysalduie78.es/php/noticias.php',
+        url: 'https://hockeysalduie78.es/noticias.php',
         type: 'POST',
         data: "nombre=5&pagina="+numero,
         
