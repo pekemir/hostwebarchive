@@ -57,7 +57,7 @@ function consultalistData(numero) {
   si numero =2 o mas se muestran:cantidad de noticias existentes que hay desde el final -4xnumero-1*/
      
        }
-       function nname () {cantidaddenoticias=noticias.Noticias[0].total;
+     function nname () {cantidaddenoticias=noticias.Noticias[0].total;
         console.log("cantidad de noticias total es: "+cantidaddenoticias);
           
             

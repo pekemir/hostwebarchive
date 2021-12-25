@@ -23,6 +23,7 @@ var noticiass=null;
 var IMAGENES=[];
 var noticias=null;
 var valorinicio;
+var numerodenoticia;
 
 window.onload = function getGET()
 { // capturamos la url
@@ -37,37 +38,35 @@ window.onload = function getGET()
         // obtenemos un array con cada clave=valor
         var GET = getString.split('&');
         console.log(GET);
-        var numero=GET[0];
-console.log(numero);      
-        var get = {};
+        var tmp = GET[0].split('=');
+        numnoticia=tmp[1];     
+        console.log(numnoticia);
         // recorremos todo el array de valores
-        for(var i = 0, l = GET.length; i < l; i++){
-            var tmp = GET[i].split('=');
-               numnoticia=tmp[1];     
-            console.log(tmp[1]);
-           var numnoticia2= numnoticia.replace("#","")
-            console.log(numnoticia2);
-            numnoticia=numnoticia2;
-            console.log("aora");
-            request.open('GET', requestURL);
-            request.responseType = 'json';
-            request.send();
-            request.onload = function() {
-            const superNoticias = request.response;
-            noticiass=superNoticias;    
-            var numero=parseInt(numnoticia, 10);
-            console.log(numero);
-            console.log(numnoticia+"holaaaaa");
-            showNoticia(numnoticia);}
-        }
-        return get;
-        
-       
-    }
-    
+       numerodenoticia=numnoticia;
+       consultanoticia(numerodenoticia);
+
+            
+    }else{location.href='noticias.html';}
+   
 }
     
+function consultanoticia(numero) {
+  $.ajax({
+    url: 'https://hockeysalduie78.es/noticia.php',
+    type: 'POST',
+    data: "nombre=5&pagina="+numero,
     
+    
+    success: function(data){
+      console.log(data);
+      const noticias4 = JSON.parse(data);
+      noticias=noticias4;
+      console.log(noticias);
+      
+     showNoticia(numero);
+    }
+  })
+} 
     
    
 
