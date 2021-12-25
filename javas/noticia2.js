@@ -78,11 +78,11 @@ function consultanoticia(numero) {
        console.log(valorinicio);
         max=noticias.length;
          //array de imagenes
-        for (let index = 0; index < noticias.Noticias.imagenes.length; index++) {
-            var ruta='url(imagenes/noticias/'+ noticias.Noticias.imagenes[index]+'.jpg)';
-           IMAGENES[index]=ruta;
+       
+            var ruta='url(imagenes/noticias/'+ noticias.Noticias.imagenes+')';
+           IMAGENES[0]=ruta;
            fondo1.style.backgroundImage=ruta;
-        };
+       
 
         
         myH1.textContent = noticias.Noticias.titulo;
