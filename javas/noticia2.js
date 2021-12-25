@@ -93,16 +93,16 @@ function consultanoticia(numero) {
 
          
           var enlace;
+        if (noticias.Noticias.enlaces!="") {
 
-        for (let inn = 0; inn < noticias.Noticias.enlaces.length; inn++) {
-            console.log(noticias.Noticias.enlaces[inn]);
-            var parrafo = document.createElement("a");
-            parrafo.className="p1noticias";
-            enlace=noticias.Noticias.enlaces[inn];
-            parrafo.href=enlace;
-            parrafo.innerHTML=enlace;
-          contenedortexto.appendChild(parrafo);
-        };
+          var parrafo = document.createElement("a");
+          parrafo.className="p1noticias";
+          enlace=noticias.Noticias.enlaces;
+          parrafo.href=enlace;
+          parrafo.innerHTML=enlace;
+        contenedortexto.appendChild(parrafo);
+        }
+
          	
           
          
