@@ -74,7 +74,7 @@ function consultanoticia(numero) {
        
        valorinicio=numero;
         
-       console.log(noticias.length);
+      
        console.log(valorinicio);
         max=noticias.length;
          //array de imagenes
