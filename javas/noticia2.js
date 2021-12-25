@@ -109,7 +109,7 @@ function consultanoticia(numero) {
           
          
           mypp1.textContent = noticias.Noticias[0].fecha;
-          var ruta="url(imagenes/noticias/"+ noticias.Noticias[0].imagenes+".jpg)";
+          var ruta="url(imagenes/noticias/"+ noticias.Noticias[0].imagenes+")";
           console.log(ruta);
           fondo1.style.backgroundImage=ruta;
           if (IMAGENES.length>1) {
