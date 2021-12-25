@@ -28,7 +28,7 @@ if($pr->execute()){
  $noticias = array();
   
  while($pr->fetch()){
-  $noticia = array("id"=>$id,"titulo"=>$titulo, "noticiacorta"=>$noticiacorta,"noticiaentera"=>$noticiaentera, "imagenes"=>$imagenes,"enlaces"=>$enlaces,fecha"=>$fecha);
+  $noticia = array("id"=>$id,"titulo"=>$titulo, "noticiacorta"=>$noticiacorta,"noticiaentera"=>$noticiaentera, "imagenes"=>$imagenes,"enlaces"=>$enlaces,"fecha"=>$fecha);
   $noticias['Noticias'][] = $noticia;
   
  }
