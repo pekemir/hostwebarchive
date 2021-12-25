@@ -73,39 +73,32 @@ function consultanoticia(numero) {
     function showNoticia(numero) {
        
        valorinicio=numero;
-        noticias = noticiass['noticias'];
+        
        console.log(noticias.length);
        console.log(valorinicio);
         max=noticias.length;
          //array de imagenes
-        for (let index = 0; index < noticias[valorinicio].imagenes.length; index++) {
-            var ruta='url(imagenes/noticias/'+ noticias[valorinicio].imagenes[index]+'.jpg)';
+        for (let index = 0; index < noticias.Noticias.imagenes.length; index++) {
+            var ruta='url(imagenes/noticias/'+ noticias.Noticias.imagenes[index]+'.jpg)';
            IMAGENES[index]=ruta;
            fondo1.style.backgroundImage=ruta;
         };
 
         
-        myH1.textContent = noticias[valorinicio].titulo;
+        myH1.textContent = noticias.Noticias.titulo;
           
-          console.log(noticias[valorinicio].textolargo.length);
-          myp1.textContent = noticias[valorinicio].textolargo[0];
+         
+          myp1.textContent = noticias.Noticias.noticiaentera;
 
-console.log(noticias[valorinicio].textolargo);
-          for (let index = 1; index < noticias[valorinicio].textolargo.length; index++) {
-            var parrafo = document.createElement("p");
-          parrafo.className="p1noticias";
-          parrafo.textContent=noticias[valorinicio].textolargo[index];
-          contenedortexto.appendChild(parrafo);
-              console.log(noticias[valorinicio].textolargo[index]);
-              
-          }; 
+
+         
           var enlace;
 
-        for (let inn = 0; inn < noticias[valorinicio].enlace.length; inn++) {
-            console.log(noticias[valorinicio].enlace[inn]);
+        for (let inn = 0; inn < noticias.Noticias.enlaces.length; inn++) {
+            console.log(noticias.Noticias.enlaces[inn]);
             var parrafo = document.createElement("a");
             parrafo.className="p1noticias";
-            enlace=noticias[valorinicio].enlace[inn];
+            enlace=noticias.Noticias.enlaces[inn];
             parrafo.href=enlace;
             parrafo.innerHTML=enlace;
           contenedortexto.appendChild(parrafo);
@@ -113,8 +106,8 @@ console.log(noticias[valorinicio].textolargo);
          	
           
          
-          mypp1.textContent = noticias[valorinicio].fecha;
-          var ruta="url(imagenes/noticias/"+ noticias[valorinicio].imagen+".jpg)";
+          mypp1.textContent = noticias.Noticias.fecha;
+          var ruta="url(imagenes/noticias/"+ noticias.Noticias.imagenes+".jpg)";
           fondo1.style.backgroundImage=ruta;
           if (IMAGENES.length>1) {
               interval=16000/IMAGENES.length;
