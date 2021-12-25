@@ -1,6 +1,6 @@
 
 var numnoticia;
-var max;
+var max=10;/*poner maximo php*/
     const header = document.querySelector('header');
     const section = document.querySelector('section');
     const myH1=document.getElementById('h1primeranoticia2');
@@ -128,26 +128,40 @@ var parrafo = document.createElement("a");
         }
 
         function abrirnoticiasig(){
-                var numero=parseInt(numnoticia, 10);
+          var noticiaid=noticias.Noticias[0].id;
+          console.log("id"+noticiaid);
+          noticiaquequieromostrar=noticiaid;
+          
+          console.log(noticiaquequieromostrar+"nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+         
+  
+               
 
                 console.log(numero+1);
-                var noticianumero=numero+1;
-                if (max>noticianumero){
-                    numnoticia=noticianumero;
+               
+                if (max>noticiaid+1){
+                   noticiaid=noticiaid+1;
          
-               location.href='noticia.html?var1='+noticianumero;}
+                    location.href='noticia.html?noticia='+noticiaid;}
               
               
           }
           function abrirnoticiasant(){
-            var numero=parseInt(numnoticia, 10);
+            var noticiaid=noticias.Noticias[0].id;
+            console.log("id"+noticiaid);
+            noticiaquequieromostrar=noticiaid;
+            
+            
+           
+    
+           
 
-            console.log(numero+1);
-            var noticianumero=numero-1;
+           
+            var noticianumero=noticiaquequieromostrar-1;
             if (noticianumero>=0){
                 numnoticia=noticianumero;
                
-            location.href='noticia.html?var1='+noticianumero;}
+            location.href='noticia.html?noticia='+noticianumero;}
           
           
 
