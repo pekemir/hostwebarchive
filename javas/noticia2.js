@@ -3,9 +3,6 @@ var numnoticia;
 var max;
     const header = document.querySelector('header');
     const section = document.querySelector('section');
-    const requestURL = 'https://pekemir.github.io/noticias.json';
-      /*  const requestURL = 'https://www.hockeysalduie78.es/noticias.json';*/
-    const request = new XMLHttpRequest();
     const myH1=document.getElementById('h1primeranoticia2');
     const contenedortexto = document.getElementById("contenedorparatexto");
       
@@ -28,9 +25,7 @@ var noticias=null;
 var valorinicio;
 
 window.onload = function getGET()
-{
-   
-    // capturamos la url
+{ // capturamos la url
     var loc = document.location.href;
     console.log(loc);
     // si existe el interrogante
@@ -42,7 +37,8 @@ window.onload = function getGET()
         // obtenemos un array con cada clave=valor
         var GET = getString.split('&');
         console.log(GET);
-      
+        var numero=GET[0];
+console.log(numero);      
         var get = {};
         // recorremos todo el array de valores
         for(var i = 0, l = GET.length; i < l; i++){
