@@ -121,7 +121,7 @@ var parrafo = document.createElement("a");
         
         }
         function renderizarImagen () {
-           
+           console.log("cambio");
             $imagen.style.backgroundImage = IMAGENES[posicionActual];
             
            
