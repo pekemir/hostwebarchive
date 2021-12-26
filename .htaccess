@@ -21,5 +21,8 @@ deny from all
 
 </files>
 #evita el hotlink
+#redirige en busqueda google
 RedirectMatch 301 ^/noticias/ /noticias.html
+RedirectMatch 301 ^/equipos/ /equipos.html
+RedirectMatch 301 ^/escuelas/ /escuelas.html
 
