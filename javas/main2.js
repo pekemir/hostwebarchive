@@ -104,7 +104,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
                 ''+noticias.Noticias[4].titulo,
              ];
              TEXTOnoticias=[
-                ''+noticias.Noticias[1].textocorto,
+                ''+noticias.Noticias[1].noticiacorta,
                 ''+ noticias.Noticias[2].textocorto,
                  ''+noticias.Noticias[3].textocorto,
                  ''+noticias.Noticias[4].textocorto,
