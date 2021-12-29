@@ -129,24 +129,11 @@ window.onload= function(){cargarimagenesnoticiasonload();
                     function iniciopatallagrande(){
 
                         stopIntervalo(intervalo);
-                        posicionActual = 0;
-                        console.log("grande");
-                        const request = new XMLHttpRequest();
-                        request.open('GET', requestURL);
-                        request.responseType = 'json';
-                        request.send();
-                        request.onload = function() {
-                        const superNoticias = request.response;
-                        noticiass=superNoticias;
-                        console.log(noticiass);
-                        const noticias = noticiass['noticias'];
-                        cantidaddenoticias=noticias.length;
-                        console.log("aqui");
-                        console.log(cantidaddenoticias);
+                       
                      IMAGENES = [
                          'url(imagenes/fondosfijos/sudadera.jpg)',
-                         'url(imagenes/noticias/'+ noticias[cantidaddenoticias-1].imagen+'.jpg)',
-                         'url(imagenes/noticias/'+ noticias[cantidaddenoticias-2].imagen+'.jpg)',
+                         IMAGENESnoticias[0],
+                         IMAGENESnoticias[1],
                          'url(imagenes/fondosfijos/escuela33.jpg',
                          'url(imagenes/fondosfijos/horagratis.png)',
                          /* 'url(imagenes/noticias/'+ noticias[cantidaddenoticias-4].imagen+'.jpg)',*/
@@ -164,8 +151,8 @@ window.onload= function(){cargarimagenesnoticiasonload();
                      ];
                      TITULOS2=[
                          somos,
-                         ''+ noticias[cantidaddenoticias-1].titulo,
-                         ''+ noticias[cantidaddenoticias-2].titulo,
+                         ''+ TITULOSnoticias[0],
+                         ''+ TITULOSnoticias[1],
                          'Te esperamos...',
                          '',
                      ]
@@ -180,7 +167,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
                      titul.textContent=TITULOS[posicionActual];
                      titul2.textContent=TITULOS2[posicionActual];
                      boton.textContent=BOTONES[posicionActual];
-                      }
+                      
                      playIntervalo();
                     }
                     function iniciopantallapequeña(){
