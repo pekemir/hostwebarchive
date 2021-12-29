@@ -195,7 +195,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
    
                         stopIntervalonoticias(intervalonoticias);
                         console.log("aqui");
-                        posicionActualnoticias = 0;
+                        posicionActualnoticias = 1;
                        
                        
                      playIntervalonoticias();
@@ -208,8 +208,10 @@ window.onload= function(){cargarimagenesnoticiasonload();
                            titulonoticias2.style.animationName='opacidad3'
                            titulonoticias2.style.animationDuration='4s';
                            
-                       }, 0);
-                       
+                       });
+                       $imagennoticias.style.backgroundImage = IMAGENESnoticias[0];
+                        titulonoticias.textContent=TITULOSnoticias[0];
+                        fechanoticias.textContent=FECHASnoticias[0];
                        /*titul222.style.opacity='0';*/
                        intervalonoticias = setInterval(pasarFotonoticias, TIEMPO_INTERVALO_MILESIMAS_SEG_NOTICIAS);
                      }
