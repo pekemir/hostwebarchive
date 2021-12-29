@@ -58,7 +58,7 @@ const TIEMPO_INTERVALO_MILESIMAS_SEG_NOTICIAS = 5000;
         var noticiass=null;
 
 window.onload= function(){cargarimagenesnoticiasonload();
-    next1();
+    
     var d=new Date;
     console.log("date"+ d.getDate());
     console.log("date"+ d.getMonth());
@@ -120,8 +120,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
             }
           });
          
-                        
-                    
+        next(); 
                      
                       
                       }
@@ -176,8 +175,9 @@ window.onload= function(){cargarimagenesnoticiasonload();
                         stopIntervalo();
                         console.log ("finppequeña");
                     }
-        function next1(){
-                        if(screen.width>1023){console.log("masde1023"); iniciopatallagrande();
+        function next(){
+                        if(screen.width>1023){console.log("masde1023"); 
+                        iniciopatallagrande();
                         iniciopantallagrandenoticias();}
                         else{console.log("menosde1023");
                         iniciopantallapequeña();
@@ -188,6 +188,8 @@ window.onload= function(){cargarimagenesnoticiasonload();
                         
                        // ponerproximospartidos();
                     }
+                    
+            
             function iniciopatallapequeñanoticias(){
    
                         stopIntervalonoticias(intervalonoticias);
@@ -240,7 +242,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
                         
                     }
 window.onresize= function(){cargarimagenesnoticiasonload();
-    next2();
+                           
     if (screen.width<screen.height) {
         console.log("lo es");
         relleno.style.flexDirection="column";
@@ -293,18 +295,7 @@ window.onresize= function(){cargarimagenesnoticiasonload();
                               }
                              
                             }  
-        function next2(){
-            if(screen.width>1023){console.log("masde1023");
-            iniciopatallagrande()
-            iniciopantallagrandenoticias()}
-            else{console.log("menosde1023");
-            iniciopantallapequeña();
-            console.log("fin"); 
-            iniciopatallapequeñanoticias();}
-           // ponerproximospartidos();
-                                
-                            }
-
+      
 function pasarFoto() {
         if(posicionActual >= IMAGENES.length - 1) {
         posicionActual = 0;
