@@ -79,6 +79,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
             console.log(data);
             const noticias4= JSON.parse(data);
             noticias=noticias4;
+
             let array = noticias.Noticias[1].imagenes.split(',',1);
         let ruta1="url(imagenes/noticias/"+ array[0]+")";
         array = noticias.Noticias[2].imagenes.split(',',1);
@@ -113,9 +114,10 @@ window.onload= function(){cargarimagenesnoticiasonload();
                  ''+noticias.Noticias[3].fecha,
                  ''+noticias.Noticias[4].fecha,
              ]
+             console.log(TEXTOnoticias[0]);
             }
           });
-          console.log(TEXTOnoticias);
+         
                         
                     
                      
