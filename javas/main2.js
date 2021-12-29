@@ -195,7 +195,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
    
                         stopIntervalonoticias(intervalonoticias);
                         console.log("aqui");
-                        posicionActualnoticias = 1;
+                        posicionActualnoticias = 0;
                        
                        
                      playIntervalonoticias();
