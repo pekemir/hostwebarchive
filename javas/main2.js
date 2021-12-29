@@ -58,6 +58,7 @@ const TIEMPO_INTERVALO_MILESIMAS_SEG_NOTICIAS = 5000;
         var noticiass=null;
 
 window.onload= function(){cargarimagenesnoticiasonload();
+    next1();
     var d=new Date;
     console.log("date"+ d.getDate());
     console.log("date"+ d.getMonth());
@@ -122,7 +123,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
                         
                     
                      
-                      next1();
+                      
                       }
                      
                     
@@ -238,7 +239,8 @@ window.onload= function(){cargarimagenesnoticiasonload();
                         fechanoticiasfija2.textContent=FECHASnoticias[1];
                         
                     }
-window.onresize= function(){cargarimagenesnoticiasonresize();
+window.onresize= function(){cargarimagenesnoticiasonload();
+    next2();
     if (screen.width<screen.height) {
         console.log("lo es");
         relleno.style.flexDirection="column";
