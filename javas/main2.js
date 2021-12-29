@@ -195,7 +195,7 @@ window.onload= function(){cargarimagenesnoticiasonload();
                        
                         }
                         
-                        ponerproximospartidos();
+                       // ponerproximospartidos();
                     }
             function iniciopatallapequeñanoticias(){
    
@@ -309,7 +309,7 @@ window.onresize= function(){cargarimagenesnoticiasonresize();
             iniciopantallapequeña();
             console.log("fin"); 
             iniciopatallapequeñanoticias();}
-            ponerproximospartidos();
+           // ponerproximospartidos();
                                 
                             }
 
