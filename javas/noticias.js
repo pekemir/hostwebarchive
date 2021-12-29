@@ -71,28 +71,28 @@ function consultalistData(numero) {
        function llenarnoticias() {
          valorinicio=4;
         myH1.textContent = noticias.Noticias[valorinicio-3].titulo;
-        myp1.textContent = noticias.Noticias[valorinicio-3].textocorto;
+        myp1.textContent = noticias.Noticias[valorinicio-3].noticiacorta;
         mypp1.textContent = noticias.Noticias[valorinicio-3].fecha;
         var array = noticias.Noticias[valorinicio-3].imagenes.split(',',1);
         var ruta="url(imagenes/noticias/"+ array[0]+")";
         fondo1.style.backgroundImage=ruta;
 
        myH2.textContent = noticias.Noticias[valorinicio-2].titulo;
-        myp2.textContent = noticias.Noticias[valorinicio-2].textocorto;
+        myp2.textContent = noticias.Noticias[valorinicio-2].noticiacorta;
         mypp2.textContent = noticias.Noticias[valorinicio-2].fecha;
         var array = noticias.Noticias[valorinicio-2].imagenes.split(',',1);
         var ruta="url(imagenes/noticias/"+ array[0]+")";
         fondo2.style.backgroundImage=ruta;
 
          myH3.textContent = noticias.Noticias[valorinicio-1].titulo;
-        myp3.textContent = noticias.Noticias[valorinicio-1].textocorto;
+        myp3.textContent = noticias.Noticias[valorinicio-1].noticiacorta;
         mypp3.textContent = noticias.Noticias[valorinicio-1].fecha;
         var array = noticias.Noticias[valorinicio-1].imagenes.split(',',1);
        var ruta="url(imagenes/noticias/"+ array[0]+")";
         fondo3.style.backgroundImage=ruta;     
        
         myH4.textContent = noticias.Noticias[valorinicio].titulo;
-        myp4.textContent = noticias.Noticias[valorinicio].textocorto;
+        myp4.textContent = noticias.Noticias[valorinicio].noticiacorta;
         mypp4.textContent = noticias.Noticias[valorinicio].fecha;
         var array = noticias.Noticias[valorinicio].imagenes.split(',',1);
        var ruta="url(imagenes/noticias/"+ array[0]+")";
