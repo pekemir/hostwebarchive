@@ -117,10 +117,11 @@ window.onload= function(){cargarimagenesnoticiasonload();
                  ''+noticias.Noticias[4].fecha,
              ]
              console.log(TEXTOnoticias);
+             next(); 
             }
           });
          
-        next(); 
+     
                      
                       
                       }
