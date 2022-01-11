@@ -144,7 +144,7 @@ function cargaSendMail(){
 
            data:  datos,
            // hacemos referencia al archivo mail.php
-           url:  'http://localhost:82/php/mail.php',
+           url:  'php/mail.php',
 
            type:  'post',
 
@@ -236,7 +236,7 @@ var noticias= null;
 window.onload= function(){cargarimagenesnoticiasonload();}
 function cargarimagenesnoticiasonload(){
   $.ajax({
-      url: 'http://localhost:82/php/noticias.php',
+      url: 'php/noticias.php',
       type: 'POST',
       data: "nombre=5&pagina=1",
       success: function(data){
