@@ -154,7 +154,7 @@ function cargaSendMail(){
            },
 
            success:  function (data) {
-
+console.log(data);
                   $('form')[0].reset(); 
                   $("#c_enviar").val("Enviar Mensaje");
                   $("#c_information p").html(data);
