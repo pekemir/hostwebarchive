@@ -200,8 +200,7 @@ function cargaSendMail(){
       "color": "#4F8A10",
       
 });				
-$("#c_information").text( "¡Rellene los campos,por favor!" );
-$("#c_information").fadeIn('slow');
+
   }
 
 }
