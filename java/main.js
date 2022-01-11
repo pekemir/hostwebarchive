@@ -142,7 +142,7 @@ function cargaSendMail(){
 
            data:  datos,
            // hacemos referencia al archivo mail.php
-           url:  'php/mail.php',
+           url:  'https://hockeysalduie78.es/php/mail.php',
 
            type:  'post',
 
