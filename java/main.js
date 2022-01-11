@@ -76,9 +76,7 @@ function cargaSendMail(){
   var s_msg = $('#c_msg').val();
   var s_spam_textbox1 = $('#c_spam_textbox1').val();
   var s_spam_textbox2 = $('#c_spam_textbox2').val();
-  var s_email = "aa@df.com";
-  var s_name = "alex";    
-  var s_msg = "holahola";
+ 
   
   if (filter.test(s_email)){
   sendMail = "true";

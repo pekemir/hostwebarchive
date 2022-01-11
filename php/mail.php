@@ -2,18 +2,6 @@
 
 
 
-$para      = 'alejandromirbel@hotmail.com';
-$asunto    = 'El asunto del correo';
-$descripcion   = 'Este es el cuerpo del correo';
-$de = 'From: alejandromirbel@gmail.com';
-
-if (mail($para, $asunto, $descripcion, $de))
-   {
-echo "Correo enviado satisfactoriamente";
-}
-else {
-    echo "Email sending failed...";
-}
 
 
 if(isset($_POST['cenviar'])){
