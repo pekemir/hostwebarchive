@@ -38,7 +38,7 @@ if(isset($_POST['cenviar'])){
     /***** Zona de envio con la funcion MAIL de php *****/
     // Para probarlo, descomentas esta linea:
    
-    mail('alejandromirbel@gmail.com', 'Asunto: Probando formulario de contacto...', $msj);
+    mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj);
   
 
 }
