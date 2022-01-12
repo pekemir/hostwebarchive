@@ -1,21 +1,5 @@
 <?php
 
-$para      = 'alejandromirbel@hotmail.com';
-$asunto    = 'El asunto del correofueramail';
-$descripcion   = 'Este es el cuerpo del correo';
-$de = 'From: alejandromirbel@gmail.com';
-
-if (mail($para, $asunto, $descripcion, $de))
-   {
-echo "Correo enviado satisfactoriamentemailll";
-}
-else {
-    echo "Email sending failed...";
-}
-
-
-
-
 if(isset($_POST['cenviar'])){
 
    
@@ -53,33 +37,32 @@ if(isset($_POST['cenviar'])){
     
     if (mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj))
    {$a =1;
-    $b = 'ya esta'
+    $b = 'Correo enviado satisfactoriamente pronto le responderemos';
     $dab = array(
         "a" => $a, 
         "b" => $b
       );
      
       echo (json_encode($dab));
-        echo "Correo enviado satisfactoriamenteformulario";
+       
 }
 else {
-    echo "Email sending failedformulario...";
+    
     $a = 0;
-    $b = '<div class="alert alert-danger alert-dismissable">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Por favor, ingresa tus Nombres y Apellidos.</div>';
+    $b = 'Ha habido algun problema, intentelo mas tarde';
    
     $dab = array(
       "a" => $a, 
       "b" => $b
     );
    
-    echo (json_encode($dab))
+    echo (json_encode($dab));
 }
 
     
 }
 
-//else die("El acceso directo a este archivo no es permitido.");
+else die("El acceso directo a este archivo no es permitido.");
 
     
     
