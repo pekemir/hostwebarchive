@@ -51,15 +51,8 @@ if(isset($_POST['cenviar'])){
     // Para probarlo, descomentas esta linea:
    
     
-    if (mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj);)
-   {
-echo "Correo enviado satisfactoriamenteformulario";
-}
-else {
-    echo "Email sending failedformulario...";
-}
-
-    $a =1;
+    if (mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj))
+   {$a =1;
     $b = 'ya esta'
     $dab = array(
         "a" => $a, 
@@ -67,8 +60,11 @@ else {
       );
      
       echo (json_encode($dab));
+        echo "Correo enviado satisfactoriamenteformulario";
 }
-else{ $a = 0;
+else {
+    echo "Email sending failedformulario...";
+    $a = 0;
     $b = '<div class="alert alert-danger alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Por favor, ingresa tus Nombres y Apellidos.</div>';
    
@@ -77,7 +73,12 @@ else{ $a = 0;
       "b" => $b
     );
    
-    echo (json_encode($dab));}
+    echo (json_encode($dab))
+}
+
+    
+}
+
 //else die("El acceso directo a este archivo no es permitido.");
 
     
