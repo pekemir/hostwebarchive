@@ -155,6 +155,8 @@ function cargaSendMail(){
 
            success:  function (data) {
 console.log(data);
+console.log(data.a);
+console.log(data.b);
                   $('form')[0].reset(); 
                   $("#c_enviar").val("Enviar Mensaje");
                   $("#c_information p").html(data);

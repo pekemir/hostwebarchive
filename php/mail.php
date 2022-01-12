@@ -7,7 +7,7 @@ $de = 'From: alejandromirbel@gmail.com';
 
 if (mail($para, $asunto, $descripcion, $de))
    {
-echo "Correo enviado satisfactoriamente";
+echo "Correo enviado satisfactoriamentemailll";
 }
 else {
     echo "Email sending failed...";
@@ -50,9 +50,23 @@ if(isset($_POST['cenviar'])){
     /***** Zona de envio con la funcion MAIL de php *****/
     // Para probarlo, descomentas esta linea:
    
-    mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj);
-  
+    
+    if (mail('alejandromirbel@hotmail.com', 'Asunto: Probando formulario de contacto...', $msj);)
+   {
+echo "Correo enviado satisfactoriamenteformulario";
+}
+else {
+    echo "Email sending failedformulario...";
+}
 
+    $a =1;
+    $b = 'ya esta'
+    $dab = array(
+        "a" => $a, 
+        "b" => $b
+      );
+     
+      echo (json_encode($dab));
 }
 else{ $a = 0;
     $b = '<div class="alert alert-danger alert-dismissable">
