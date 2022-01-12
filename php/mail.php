@@ -1,5 +1,17 @@
 <?php
 
+$para      = 'alejandromirbel@hotmail.com';
+$asunto    = 'El asunto del correofueramail';
+$descripcion   = 'Este es el cuerpo del correo';
+$de = 'From: alejandromirbel@gmail.com';
+
+if (mail($para, $asunto, $descripcion, $de))
+   {
+echo "Correo enviado satisfactoriamente";
+}
+else {
+    echo "Email sending failed...";
+}
 
 
 
@@ -42,7 +54,14 @@ if(isset($_POST['cenviar'])){
   
 
 }
-
+else{ $a = 0;
+    $b = '<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Por favor, ingresa tus Nombres y Apellidos.</div>';
+   
+    $dab = array(
+      "a" => $a, 
+      "b" => $b
+    );
    
     echo (json_encode($dab));}
 //else die("El acceso directo a este archivo no es permitido.");
