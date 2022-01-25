@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/cabecero.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/noticias.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -23,41 +23,26 @@
     </header>
     
     <main>
-        <section class="section section1">
-            
-            <article class="articlebl article1" id="article1">
-               <div class="contenedorh contenedorhleft"><h2 class="">HOCKEY <br>SALDUIE 78</h2></div> 
-                <div class="contenedorh contenedorhleft"><h3 class="hred">CONOCENOS</h3></div>
-                <p class="textoarticulo" id="textoespandido">Un heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales deUn heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales de  </p>
-                <a id="mostrartextoexpandido " class="hred articleblmasinfo articulo1masinfoarticle1" onclick="mostrarmastexto('textoespandido')" ><span class="icon-circle-down"></span></a>
-            </article>
-           
-          
-        </section>
-        <section class="section section2">
-
-            <article class="articlebl articles" id="articuloescuela">
-                <img class="imagencortaarticle" src="imagenes/escuela/juega.jpg" alt="escuela salduie78">
-                <div class="contenedorh contenedorhright">
-                    <h2 class="hright">ESCUELA <br>SALDUIE 78</h2>
-                </div>
-                <div class="contenedorh contenedorhright"><h3 class="hright hred">¡VEN A PROBAR!</h3></div>
-                <div class="boton_mas_bajar">
-                    <a class="articleblmasinfo hred" onclick="mostrarmastexto('textoespandido2')"><span class="icon-circle-down"></span></a>
-                    <button type="button" class="boton botonrojo">Escuela Salduie78</button>
-           
-                </div>
-                <p class="textoarticulo" id="textoespandido2">Un heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales deUn heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales de  </p>
-                
-               </article>
-           
-        </section>
-        <section class="section section3" onclick="abrirpagina('noticias.html')">
+        
+        <section class="section section3" id="listadonoticias">
             <div class="contenedorhleft fueraarticulo"> 
-                <h2 class="hwhite"> SALDUIE 78 ACTUALIDAD</h2>
-                <h3 class="hred">COMUNICACION</h3></div>
-           <article class="articlenoticia " >
-               <img id="articulonoticia1"class="imagencortaarticlenoticia"src="imagenes/noticias/noticia1.jpg" alt="">
+                <h2 class=> SALDUIE78 ACTUALIDAD</h2>
+                <h3 class="hred">NOTICIAS</h3></div>
+                <nav class="barrapaginas">
+                    <ul>
+                        <li><a onclick="primerapag()"><span class="icon-backward"></span></a></li>
+                        <li><a onclick="unamenos()"><span class="icon-previous"></span></a></li>
+                      <li><a onclick="numerodepagina(1)">1</a></li>
+                      <li><a onclick="numerodepagina(2)">2</a></li>
+                      <li><a onclick="numerodepagina(3)">3</a></li>
+                      <li><a onclick="numerodepagina(4)">4</a></li>
+                      <li><a onclick="numerodepagina(15)">5</a></li>
+                      <li><a onclick="unamas()"><span class="icon-next"></span></a></li>
+                      <li><a onclick="ultimapag()"><span class="icon-forward2"></span></a></li>
+                    </ul>
+                  </nav>
+           <article class="articlenoticia" onclick="clicknoticia(0)" >
+               <img id="articulonoticia1"class="imagencortaarticlenoticia"src="" alt="">
                <div class="titulonoticia" >
                 <p id="noticia1titulo"> 03 jun 2017 </p>
                 </div>
@@ -68,8 +53,8 @@
                  
               </div>
             </article>
-           <article class="articlenoticia " >
-            <img id="articulonoticia2"class="imagencortaarticlenoticia"src="imagenes/noticias/noticia1.jpg" alt="">
+           <article class="articlenoticia" onclick="clicknoticia(1)">
+            <img id="articulonoticia2"class="imagencortaarticlenoticia"src="" alt="">
             <div class="titulonoticia" >
                 <p id="noticia2titulo"> 03 jun 2017 </p>
                 </div>
@@ -80,8 +65,8 @@
                 
              </div>
         </article>
-        <article class="articlenoticia " >
-            <img id="articulonoticia3"class="imagencortaarticlenoticia"src="imagenes/noticias/noticia1.jpg" alt="">
+        <article class="articlenoticia"onclick="clicknoticia(2)" >
+            <img id="articulonoticia3"class="imagencortaarticlenoticia"src="" alt="">
             <div class="titulonoticia" >
                 <p id="noticia3titulo"> 03 jun 2017 </p>
                 </div>
@@ -92,62 +77,68 @@
                 
              </div>
         </article>
-        </section>
-        <section class="section section2">
-            <article class="articlered articles">
-                <div class="contenedorh contenedorhright">
-                    <h4 class=" hright">¿QUIERES FORMAR PARTE DE ESTA FAMILIA?</h4>
-                    </div>
-                    <div class="boton_mas_bajar">
-                        <a class="articleblmasinfo" onclick="mostrarmastexto('textoespandido3')"><span class="icon-circle-down"></span></a>
-                   
-                        <button type="button" class="boton botonnegro">Unete a Nosotros</button>
-                  
+        <article class="articlenoticia" onclick="clicknoticia(3)">
+            <img id="articulonoticia4"class="imagencortaarticlenoticia"src="" alt="">
+            <div class="titulonoticia" >
+                <p id="noticia4titulo"> 03 jun 2017 </p>
                 </div>
-                <p class="textoarticulo hwhite" id="textoespandido3">Un heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales deUn heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales de  </p>
-               
-                <div class="hueco"></div>
-                <div class="contenedorhleft">
-                    <h4 class="hwhite h4left">BUSCANOS EN LAS REDES SOCIALES</h4> </div>
-                    <div class="boton_mas_bajar">
-                        <button type="button" class="boton botonnegro">Siguenos</button>
-                        <a class="hblack articleblmasinfo " onclick="mostrarmastexto('textoespandido4')"><span class="icon-circle-down"></span></a>
-                   
-                    </div>
-                    <p class="textoarticulo hwhite" id="textoespandido4">Un heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales deUn heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales de  </p>
-               
-              </article>
-        </section>
-        <section class="section section4">
-            <div class="contenedorhleft fueraarticulo"> 
-                <h2 class="hred"> SALDUIE 78 PARTIDOS</h2></div>
+                <div class="fechanoticia" >
                 
-            <article class="articlebl articles">
-               
-                <div class="boton_mas_bajar">
-                    <button type="button" class="boton botonrojo">PROXIMOS PARTIDOS</button>
-                    <a class="hred articleblmasinfo " onclick="mostrarproximospartidos()"><span class="icon-circle-down"></span></a>
-               
-                </div>
-                <div id="contenedorproximospartidos" >
-               
-            </div>
-                <div class="finalpartido"></div>
-
-                <div class="boton_mas_bajar">
-                    <button type="button" class="boton botonrojo">ULTIMOS RESULTADOS</button>
-                    <a class="hred articleblmasinfo " onclick="mostrarresultadospartidos()"><span class="icon-circle-down"></span></a>
-               
-                </div>
-            </div>
-            <div id="contenedorresultadospartidos" >
-           
-        </div>
-            <div class="finalpartido"></div>
-
-            <div class="boton_mas_bajar">
-            </article>
+                <span class="icon-calendar"></span>
+                <p id="noticia4fecha"> 03 jun 2017 </p>
+                
+             </div>
+        </article>
         </section>
+        <section class="section section3" id="noticiasuelta">
+            <div class="contenedorhleft fueraarticulo"> 
+                <h2 class=> SALDUIE 78 ACTUALIDAD</h2>
+                <h3 class="hred">NOTICIAS</h3></div>
+                <nav class="barrapaginas">
+                    <ul>
+                        <li><a onclick="volveranoticias()" ><span class="icon-circle-left"></span>    VOLVER A NOTICIAS</a></li>
+                    </ul>
+                </nav>
+                
+           <article class="articlenoticia " >
+               <div class="titulonotician" >
+                <p id="noticiatitulon"> 03 jun 2017 </p>
+                </div>
+               <div class="fechanotician" >
+                
+                <span class="icon-calendar"></span>
+                 <p id="noticiafechan"> 03 jun 2017 </p>
+                 
+              </div>
+              <img id="articulonotician"class="imagencortaarticlenotician"src="imagenes/noticias/noticia1.jpg" alt="">
+             <div class="carruselnoticias">
+                 
+                   <a onclick="retrocederimagen()"><span class="icon-previous"></span></a>
+                   <img id="miniimagen0" class="miniimagen" src="imagenes/noticias/noticia1.jpg" alt="miniimagen1">
+                   
+                   <img id="miniimagen1" class="miniimagen" src="imagenes/noticias/noticia1.jpg" alt="miniimagen1">
+                   <img id="miniimagen2" class="miniimagen" src="imagenes/noticias/noticia1.jpg" alt="miniimagen1">
+                   
+                   <a onclick="avanzarmiimagen()"><span class="icon-next"></span></a>   
+                 
+               
+             </div>
+             
+              <p class="textoarticulo" id="textonoticia">Un heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales deUn heraldo o, más correctamente, un heraldo de armas es un oficial de armas, el rango intermedio entre rey de armas y persevante. El título se aplica en ocasiones, erróneamente, a todos los oficiales de  </p>
+               
+            </article>
+            <nav class="barrapaginas">
+                <ul>
+                    <li><a onclick="volveranoticias()" ><span class="icon-circle-left"></span>    VOLVER A NOTICIAS</a></li>
+                </ul>
+            </nav>
+        </section>
+
+
+
+
+
+
         <footer >
             <section>
             <div class="contenedorhleft fueraarticulo"> 
@@ -240,7 +231,7 @@
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="java/main.js"></script>  
+    <script src="java/noticias.js"></script>  
     <script src="java/cabecero.js"></script>
 
 </body>
