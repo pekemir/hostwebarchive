@@ -18,18 +18,21 @@ if(mysqli_connect_errno()) {
 mysqli_set_charset($db, "utf8");
 
 //consultanumeroderegistros
-$pr2 = $db->prepare("SELECT categoria,campeonato,dia,hora,eqlocal,esclocal,eqvis,esvis,lugar FROM temporada2122 WHERE control='1' and semana=? ");
+$pr2 = $db->prepare("SELECT categoria,campeonato,dia,hora,eqlocal,esclocal,eqvis,esvis,lugar,controldivision 
+FROM temporada2122 WHERE control='1'AND jugado='0' ORDER BY controldivision DESC ,dia ASC ");
 $semana=$respuesta;
+
 //Indicamos los valores pasados por referencia
-$pr2->bind_param("i", $semana);
+//$pr2->bind_param("i", $semana);
 //Ejecutamos la consulta
 if($pr2->execute()){
  $pr2->store_result();
- $pr2->bind_result($categoria,$campeonato,$dia,$hora,$eqlocal,$esclocal,$eqvis,$esvis,$lugar);
+ $pr2->bind_result($categoria,$campeonato,$dia,$hora,$eqlocal,$esclocal,$eqvis,$esvis,$lugar,$controldivision);
  $noticias = array();
 $categoriaanterior="";
+
  while($pr2->fetch()){
- // if ($categoriaanterior!=$campeonato) {
+ if ($categoriaanterior!=$controldivision) {
     $noticia = array(
         "categoria"=>$categoria,
         "campeonato"=>$campeonato,
@@ -43,8 +46,8 @@ $categoriaanterior="";
 
 );
     $noticias['Partidos'][] = $noticia;
-   // $categoriaanterior=$campeonato;
- // }
+    $categoriaanterior=$controldivision;
+ }
  
 
   

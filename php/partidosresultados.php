@@ -18,7 +18,8 @@ if(mysqli_connect_errno()) {
 mysqli_set_charset($db, "utf8");
 
 //consultanumeroderegistros
-$pr2 = $db->prepare("SELECT categoria,campeonato,dia,eqlocal,esclocal,eqvis,esvis,lugar,golocal,golvis FROM temporada2122 WHERE control='1'AND jugado='1' ");
+$pr2 = $db->prepare("SELECT categoria,campeonato,dia,eqlocal,esclocal,eqvis,esvis,lugar,golocal,golvis 
+FROM temporada2122 WHERE control='1'AND jugado='1' ORDER BY controldivision DESC,dia DESC  ");
 //Indicamos los valores pasados por referencia
 
 //Ejecutamos la consulta

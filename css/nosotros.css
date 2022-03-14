@@ -1,0 +1,123 @@
+main{
+    
+    background-color: black;}
+    :root {
+        --main-bg-color: #cf010b;
+       
+      }
+    .secciontitulo{
+        margin: 0;
+        min-height: 400px;
+        z-index: 100;
+        margin-bottom: 20px;
+        padding-top: 30px;
+        
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-end;
+        }
+        .articulotexto p{color: whitesmoke;}
+        .articulotexto{
+            margin: 0px 32px;
+        }
+        .nuestrahistoria{
+            background-image:url(../imagenes/fondosfijos/antiguo1.jpg);
+        }
+        .sobrenosotros{
+           margin-bottom: 0PX;
+            background-image:url(../imagenes/fondosfijos/familia.jpg);
+        }
+        .escuela{
+            margin-bottom: 0PX;
+            background-image:url(../imagenes/fondosfijos/escuela2.jpg);
+        }
+        .instalaciones{
+            background-image:url(../imagenes/fondosfijos/campo1.png);
+        }
+        .instalacionesala{
+            background-image:url(../imagenes/fondosfijos/pabellon.jpg);
+        }
+        .articulotexto h4{width: 150%;
+        position: relative;
+    left: -35%;}
+    .articulotexto a{
+        color: white;
+        text-decoration: none;
+    }
+    img{margin: 1em 0;width: 100%;}
+    .articuloinstalaciones ul{
+        padding: 0;
+        font-size: 1.2em;
+        margin-top: 0;
+        }
+        .articuloinstalaciones li{
+            padding: 5px;
+        
+            }
+    .articuloinstalaciones span{color:var(--main-bg-color)}
+       
+      .articles{margin-bottom: 10px;}
+      .articuloequipo{padding: 0 20px;}
+      .articles img{max-width: 90%;
+        
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;}
+        .articuloequipo a{
+            margin: 10px;
+        }
+        .fotoequipo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          
+        }
+        .lineaequipo{
+           margin: 0;
+        }
+
+        
+        .contenedortitulo{
+           
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+        }
+        .contenedortitulo h2{
+            width: 200%;
+            text-align: center;
+            font-size:2em;
+        }
+       
+        #textoespandidoseniormasculino{display: none;}
+
+        @media screen and (min-width:1000px){
+            main{
+                flex-direction: column;
+                align-items: center;
+            text-align: center; 
+                   }
+            .articulotexto h4{width: 100%;left: 0;}
+            .section2{display: flex;flex-wrap: wrap;justify-content: center
+            }
+            .articuloequipo{width: 42%;margin: 5px;}
+            .fotoequipo{height: 80%;justify-content: center;}
+            .escuela{border-top: solid black 20px;}
+            .nuestrahistoria{border-top: solid black 20px;}
+            .sobrenosotros{width: 100%;border-top: solid black 20px;}
+            .contenedorsobrenosotros{
+                margin-left: 0;
+                align-items: center;
+            }
+            .instalaciones, .instalacionesala{width: 90%;}
+            
+            .contenedorhleft{margin-left:0;
+                align-items: center;}
+           
+        }
+         

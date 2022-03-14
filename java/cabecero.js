@@ -180,18 +180,18 @@ function reveal() {
             if(res.a == "1"){
                       
               // Mostramos el mensaje 'Tu Mensaje ha sido enviado Correctamente !' 
-              $("#c_information").html(res.b);                   
+              $("#c_information").html("res.b");                   
               $("#formulario_contacto").trigger("reset");    
    
             }  else {                                       
-              $("#c_information").html(res.b); 
+              $("#c_information").html("res.b"); 
             }
                                                         
           },
    
           // Mensaje de error al enviar el formulario 
           fail:function (res) {                    
-              $("#c_information").html(res.b);
+              $("#c_information").html("res.b");
           }
      
      });
@@ -207,6 +207,7 @@ function reveal() {
   
   }
   /*fin formulariodecontacto*/
+
   function mostrarmastexto(idtexto) {
     const mostrartexto=document.getElementById(idtexto);
     if ( mostrartexto.style.display=='block') {
@@ -217,4 +218,293 @@ function reveal() {
 function abrirpagina(pagina) {
  
       location.href=pagina;
+}
+
+function ira(competicion) {
+ 
+      location.href='competiciones.html?competicion='+competicion;
+    
+  
+  
+}
+
+//menuuuuuuuuuuuuuuu
+const botonmenu = document.querySelector('.menu-activador a');
+
+(function() {
+
+  
+ botonmenu.addEventListener('click', function(event) {
+      event.preventDefault();
+      this.classList.toggle('menu-abierto');
+      if(contadornavmenu == 1){
+        expandirnavmenu();
+      } else {
+        escondernavmenu();
+        escondernavmenu5();
+        escondernavmenu51();
+        escondernavmenu52();
+      }
+  })
+
+}());
+
+
+
+
+const menu52=document.getElementById("controlnavmenu52");
+const menu0=document.getElementById("controlnavmenu0");
+const menu51=document.getElementById("controlnavmenu51");
+const menu2=document.getElementById("controlnavmenu2")
+const menu5=document.getElementById("controlnavmenu5")
+var contadornavmenu=1;
+var contadornavmenu5=1;
+var contadornavmenu51=1;
+var contadornavmenu52=1;
+var contadornavmenu2=1;
+
+
+	$(document).ready(main);
+  
+function escondernavmenu() {
+	menu0.classList.add("fuera");
+  menu0.classList.remove("dentro");
+	contadornavmenu = 1;
+}
+function expandirnavmenu() {
+  menu0.classList.add("dentro");
+  menu0.classList.remove("fuera");           
+	contadornavmenu = 0;
+
+}
+function escondernavmenu2() {
+  console.log("fuera");
+  menu2.classList.remove("dentro"); 
+  menu2.classList.add("fuera");
+ 
+	contadornavmenu2 = 1;
+}
+function expandirnavmenu2() {
+  menu2.classList.remove("fuera");
+	menu2.classList.add("dentro");
+   
+	contadornavmenu2 = 0;
+}
+function escondernavmenu5() {
+  menu5.classList.add("fuera");
+  menu5.classList.remove("dentro"); 
+	contadornavmenu5 = 1;
+}
+function expandirnavmenu5() {
+  menu5.classList.add("dentro");
+  menu5.classList.remove("fuera"); 
+	contadornavmenu5 = 0;
+}
+function escondernavmenu51() {
+	menu51.classList.add("fuera");
+  menu51.classList.remove("dentro"); 
+	contadornavmenu51 = 1;
+	
+}
+function expandirnavmenu51() {
+	menu51.classList.add("dentro");
+  menu51.classList.remove("fuera"); 
+	contadornavmenu51 = 0;
+
+}
+function escondernavmenu52() {
+  menu52.classList.add("fuera");
+  menu52.classList.remove("dentro"); 
+	contadornavmenu52 = 1;
+	
+}
+function expandirnavmenu52() {
+	menu52.classList.add("dentro");
+  menu52.classList.remove("fuera"); 
+		
+	contadornavmenu52 = 0;
+}
+
+function main(){
+	
+  $('#cabecerobotonhistoria').click(function(){
+		console.log("click");
+    if(contadornavmenu2 == 1){
+			expandirnavmenu2();
+      if (contadornavmenu5==0) {
+        escondernavmenu5();
+        escondernavmenu51();
+        escondernavmenu52();
+      }
+		} else {
+			
+			escondernavmenu2();
+		}
+
+	});
+	$('#cabecerobotoncompeticiones').click(function(){
+		if(contadornavmenu5 == 1){
+			expandirnavmenu5();
+      if (contadornavmenu2==0) {
+        escondernavmenu2();
+        
+      }
+		} else {
+		
+			escondernavmenu5();
+      if (contadornavmenu51==0) {
+        escondernavmenu51();
+      }
+      if (contadornavmenu52==0) {
+        escondernavmenu52();
+      }
+      
+		
+		}
+
+	});
+	$('#cabeceroboton51').click(function(){
+		// $('nav').toggle(); toggle=aparece brusco
+
+		if(contadornavmenu51 == 1){
+			expandirnavmenu51();
+      if (contadornavmenu52==0) {
+        escondernavmenu52();
+      }
+		} else {
+			escondernavmenu51();
+		}
+});
+$('#cabeceroboton52').click(function(){
+	// $('nav').toggle(); toggle=aparece brusco
+
+	if(contadornavmenu52 == 1){
+		expandirnavmenu52();
+    if (contadornavmenu51==0) {
+      escondernavmenu51();
+    }
+	
+	} else {
+		escondernavmenu52();
+	}
+});
+$('#volver1').click(function(){
+	escondernavmenu52();
+		escondernavmenu51();
+		escondernavmenu5()
+	
+});
+$('#volver2').click(function(){
+	escondernavmenu2();
+});
+	
+};
+
+
+
+                        //*coooookies*/
+const botonAceptarCookies = document.getElementById('btn-aceptar-cookies');
+const botonAceptarCookies2=document.getElementById('btn-aceptar-cookies2');
+const botonAceptarCookies3=document.getElementById('btn-permitirselec-cookies');
+
+const botonconfigurarCookies = document.getElementById('btn-configurar-cookies');
+const avisoCookies = document.getElementById('aviso-cookies');
+const avisoCookies2 = document.getElementById('contenedor-seleccion-cookies');
+const fondoAvisoCookies = document.getElementById('fondo-aviso-cookies');
+
+const tablero1=document.getElementById("tablero-cookie-consentimiento")
+const tablero2=document.getElementById("tablero-cookie-consentimiento-listado")
+const tablero3=document.getElementById("tablero-cookie-consentimiento-solotexto")
+
+const switchh=document.getElementById("switchid");
+const switchh1=document.getElementById("switchid1");
+dataLayer = [];
+
+if(!localStorage.getItem('no-mostrar')){
+	avisoCookies.classList.add('activo');
+	fondoAvisoCookies.classList.add('activo');
+	switchh.checked=false;
+	switchh1.checked=false;
+    console.log("noaceptadas");
+} else if(localStorage.getItem('cookies-aceptadas')){
+	
+	dataLayer.push({'event': 'cookies-aceptadas'});
+    console.log("aceptadas");
+}
+
+botonconfigurarCookies.addEventListener('click', () => {
+	avisoCookies.classList.remove('activo');
+	avisoCookies2.classList.add('activo');
+	
+	
+});
+botonAceptarCookies.addEventListener('click', () => {
+	avisoCookies.classList.remove('activo');
+	fondoAvisoCookies.classList.remove('activo');
+avisoCookies2.classList.remove('activo');
+	localStorage.setItem('cookies-aceptadas', true);
+	localStorage.setItem('no-mostrar',true);
+	dataLayer.push({'event': 'cookies-aceptadas'});
+});
+botonAceptarCookies2.addEventListener('click', () => {
+	avisoCookies.classList.remove('activo');
+	fondoAvisoCookies.classList.remove('activo');
+avisoCookies2.classList.remove('activo');
+	localStorage.setItem('cookies-aceptadas', true);
+	localStorage.setItem('no-mostrar',true);
+	dataLayer.push({'event': 'cookies-aceptadas'});
+});
+
+botonAceptarCookies3.addEventListener('click', () => {
+	avisoCookies.classList.remove('activo');
+	fondoAvisoCookies.classList.remove('activo');
+avisoCookies2.classList.remove('activo');
+
+if(switchh.checked){
+	
+	localStorage.setItem('no-mostrar',true);};
+
+if(switchh1.checked){
+	
+	localStorage.setItem('cookies-aceptadas', true);
+dataLayer.push({'event': 'cookies-aceptadas'});};
+	
+	
+	
+});
+
+function seleccion(id){
+    var scrollElements = document.getElementsByClassName("itemclic");
+    
+    scrollElements[0].classList.remove("itemclic")
+    var bot=document.getElementById(id);
+    bot.classList.add("itemclic");
+    switch (id) {
+        case "seleccion1":
+          
+            tablero3.style.display="none";
+            tablero1.style.display="block";
+            break;
+            case "seleccion2":
+                
+            tablero1.style.display="none";
+            tablero3.style.display="none";
+            break;
+            case "seleccion3":
+                tablero3.style.display="block";
+                tablero1.style.display="none";
+              
+                break;
+        
+    
+        default:
+            break;
+    }
+    /*que mostramos*/
+}
+function box(bot){
+    console.log("box");
+    console.log(bot);
+    var bot2=document.getElementById(bot);
+    console.log(bot2.checked);
 }

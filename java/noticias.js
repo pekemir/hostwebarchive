@@ -46,7 +46,7 @@ window.onload= function(){cargarimagenesnoticiasonload(controlador);
 }
 function clicknoticia(numero) {
   $bloquelistanoticias.style.display='none';
-  $bloquenoticia.style.display='block'
+  $bloquenoticia.style.display='flex'
   console.log(numero+1);
   console.log(noticias.Noticias[numero+1].id);
   abrirnoticia(numero);
@@ -110,6 +110,23 @@ function abrirnoticia(numero){
     
       
     }
+    function ponerestaimagen(numero){
+      switch (numero) {
+        case 1:
+          $imagennoticiasfijan.src =  $miniimagen0.src;
+          break;
+          case 2:
+            $imagennoticiasfijan.src = $miniimagen1.src;
+          break;
+          case 3:
+            $imagennoticiasfijan.src =$miniimagen2.src;
+          break;
+          
+      
+        default:
+          break;
+      }
+    }
     function retrocederimagen() {
       console.log(lengminimagen+"lenght");
     if (controlminimagen0-1<0) {
@@ -140,7 +157,7 @@ function abrirnoticia(numero){
     
   }
 function volveranoticias() {
-  $bloquelistanoticias.style.display='block';
+  $bloquelistanoticias.style.display='flex';
   $bloquenoticia.style.display='none'
 }
 function numerodepagina(numero) {

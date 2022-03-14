@@ -4,12 +4,15 @@
 const $imagennoticiasfija1 = document.getElementById('articulonoticia1');
 const $imagennoticiasfija2 = document.getElementById('articulonoticia2');
 const $imagennoticiasfija3 = document.getElementById('articulonoticia3');
+const $imagennoticiasfija4 = document.getElementById('articulonoticia4');
 const fechanoticiasfija1=document.getElementById('noticia1fecha');
 const fechanoticiasfija2=document.getElementById('noticia2fecha');
 const fechanoticiasfija3=document.getElementById('noticia3fecha');
+const fechanoticiasfija4=document.getElementById('noticia4fecha');
 const titulonoticiasfija1= document.getElementById('noticia1titulo');
 const titulonoticiasfija2= document.getElementById('noticia2titulo');
 const titulonoticiasfija3= document.getElementById('noticia3titulo');
+const titulonoticiasfija4= document.getElementById('noticia4titulo');
 //const fechanoticiasfija1=document.getElementById('dp2div1doscarruselpiefechanoticiasn1');
 //const textocortonoticiasfija1=document.getElementById('dp2div1doscarruselpieinicionoticia1texto');
 //const titulonoticiasfija2= document.getElementById('dp2div1doscarruselimagentitulotitulonotician2');
@@ -24,6 +27,8 @@ var FECHASnoticias;
 var TEXTOnoticias;
 var noticiass=null;
 var noticias= null;
+var partidosprox=null;
+var partidos=null;
 
 
 window.onload= function(){cargarimagenesnoticiasonload();
@@ -47,30 +52,30 @@ function numerodesemana(){
       type: 'POST',
       data: "nombre=5&pagina=1",
       success: function(data){
-      console.log(data);
+     // console.log(data);
       
       const noticias4= JSON.parse(data);
       noticias=noticias4;
       console.log(noticias);
 
       let array = noticias.Noticias[1].imagenes.split(',',1);
-  let ruta1="url(imagenes/noticias/"+ array[0]+")";
+  let ruta1="imagenes/noticias/"+ array[0];
   array = noticias.Noticias[2].imagenes.split(',',1);
-  let ruta2="url(imagenes/noticias/"+ array[0]+")";
+  let ruta2="imagenes/noticias/"+ array[0];
   array = noticias.Noticias[3].imagenes.split(',',1);
-  let ruta3="url(imagenes/noticias/"+ array[0]+")";
+  let ruta3="imagenes/noticias/"+ array[0];
   array = noticias.Noticias[4].imagenes.split(',',1);
-  let ruta4="url(imagenes/noticias/"+ array[0]+")";
+  let ruta4="imagenes/noticias/"+ array[0];
      IMAGENESnoticias = [
          ruta1,ruta2,ruta3,ruta4
        ];
-       console.log(IMAGENESnoticias);
-       $imagennoticiasfija1.style.backgroundImage = "var(--degradadonoticia),"+IMAGENESnoticias[0];
-        $imagennoticiasfija2.style.backgroundImage = "var(--degradadonoticia),"+IMAGENESnoticias[1];
-       $imagennoticiasfija3.style.backgroundImage = "var(--degradadonoticia),"+IMAGENESnoticias[2];
-       $imagennoticiasfija1.src=""; 
+     
+        $imagennoticiasfija1.src =IMAGENESnoticias[0];
+        $imagennoticiasfija2.src= IMAGENESnoticias[1];
+        $imagennoticiasfija3.src= IMAGENESnoticias[2];
+      /* $imagennoticiasfija1.src=""; 
        $imagennoticiasfija2.src="";
-       $imagennoticiasfija3.src="";
+       $imagennoticiasfija3.src="";*/
       
        
        
@@ -100,6 +105,11 @@ function numerodesemana(){
        fechanoticiasfija3.textContent=FECHASnoticias[2]
        console.log(TEXTOnoticias);
       // next(); 
+      if(screen.width>1023) { 
+        fechanoticiasfija4.textContent=FECHASnoticias[3];
+        titulonoticiasfija4.textContent=TITULOSnoticias[3];
+        $imagennoticiasfija4.src= IMAGENESnoticias[3];
+        }
       }
     });}
   
@@ -107,6 +117,7 @@ function numerodesemana(){
 
                var controlprximospartidos=0;
                function mostrarproximospartidos() {
+                 console.log("proximos");
                 const mostrartexto=document.getElementById('contenedorproximospartidos');
                 if ( mostrartexto.style.display=='block') {
                   mostrartexto.style.display='none';
@@ -118,12 +129,14 @@ function numerodesemana(){
 
                 var controlresultadospartidos=0;
                 function mostrarresultadospartidos() {
+                  console.log("resultados");
                  const mostrartexto=document.getElementById('contenedorresultadospartidos');
                  if ( mostrartexto.style.display=='block') {
                    mostrartexto.style.display='none';
                  } else {mostrartexto.style.display='block';
                  if (controlresultadospartidos==0) {
                    cargarresultados(numerodesemana());
+                   console.log(numerodesemana());
                  }   }                           }
 
            
@@ -280,7 +293,8 @@ function numerodesemana(){
                   
              
               console.log("inicio");
-                    crearproximopartido(partidosprox.Partidos[a].categoria+" - "+partidosprox.Partidos[a].campeonato,
+                    crearproximopartido(
+                    partidosprox.Partidos[a].categoria+" - "+partidosprox.Partidos[a].campeonato,
                     formatofecha(partidosprox.Partidos[a].dia),
                     partidosprox.Partidos[a].hora,
                     partidosprox.Partidos[a].esclocal+".png",
@@ -307,16 +321,16 @@ function numerodesemana(){
           type: 'POST',
           data: "nombre="+semana+"&pagina=1",
           success: function(data){
-          console.log(data);
+         // console.log(data);
           
           const partidos4= JSON.parse(data);
           partidos=partidos4;
-          console.log(partidos);
+         // console.log(partidos);
           for (let a = 0; a < partidos.Partidos.length; a++) {
            
         
    
-    console.log("inicio");
+    //console.log("inicio");
           crearpartidoresultado(partidos.Partidos[a].categoria+" - "+partidos.Partidos[a].campeonato,
           formatofecha(partidos.Partidos[a].dia),
          
@@ -328,7 +342,7 @@ function numerodesemana(){
           partidos.Partidos[a].golocal,
           partidos.Partidos[a].golvis)
           // next(); 
-          console.log("fin");
+        //  console.log("fin");
           }}
         }); 
       }

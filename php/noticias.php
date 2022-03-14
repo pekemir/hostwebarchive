@@ -45,12 +45,7 @@ if ($respuesta>0) {
   $numeromax=(($respuesta-1)*4);
 
   $id=$cantidadnoticias-$numeromax;
-
- if ($id<4) {$id=4;
-   # code...
- }
- 
-
+ if ($id<4) {$id=4; }
 } 
 else {
   switch ($respuesta) {
@@ -62,16 +57,7 @@ else {
         break;
     default:
       $id=4;
-      break;
-  }
-  # code...
-}
-
-
-
-
-//$id = $cantidadnoticias;
-
+      break;  } }
 //Indicamos los valores pasados por referencia
 $pr->bind_param("i", $id);
 //Ejecutamos la consulta
