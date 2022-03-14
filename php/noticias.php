@@ -1,8 +1,8 @@
 <?php
  $servername = "localhost";
-$database = "tablasalduie";
-$username = "root";
-$password = "";
+$database = "u295918774_Basesalduie78";
+$username = "u295918774_accesotodo11";
+$password = "SaldAM2003//web";
 
 
 $respuesta=$_POST["nombre"];
