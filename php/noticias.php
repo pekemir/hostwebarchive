@@ -1,8 +1,8 @@
 <?php
  $servername = "localhost";
-$database = "u295918774_Basesalduie78";
-$username = "u295918774_accesotodo11";
-$password = "SaldAM2003//web";
+$database = "u295918774_baseweb";
+$username = "u295918774_usuario";
+$password = "UsubasedatoS1973//weB";
 
 
 $respuesta=$_POST["nombre"];
