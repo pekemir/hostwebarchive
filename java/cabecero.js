@@ -159,14 +159,14 @@ function reveal() {
   console.log(data[0].b);
                     $('form')[0].reset(); 
                     $("#c_enviar").val("Enviar Mensaje");
-                    $("#c_information p").html(data);
+                    $("#c_information p").html();
                     
                     $("#c_information").css({
                                             "background-color": "#DFF2BF",
                                             "color": "#4F8A10",
                                             
                     });				
-                    $("#c_information").text( data.a );
+                    $("#c_information").text( "hola" );
                     $("#c_information").fadeIn('slow');
                     
   
