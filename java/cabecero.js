@@ -149,7 +149,7 @@ function reveal() {
              beforeSend: function (data) {
                     console.log(datos);
                     $("#c_enviar").val("Enviando...");
-                    $("#c_information p").html(data);
+                    $("#c_information p").html("hola");
   
              },
   
@@ -159,7 +159,7 @@ function reveal() {
   console.log(data[0].b);
                     $('form')[0].reset(); 
                     $("#c_enviar").val("Enviar Mensaje");
-                    $("#c_information p").html(data);
+                    $("#c_information p").html("hola2");
                     
                     $("#c_information").css({
                                             "background-color": "#DFF2BF",
@@ -180,7 +180,7 @@ function reveal() {
             if(res.a == "1"){
                       
               // Mostramos el mensaje 'Tu Mensaje ha sido enviado Correctamente !' 
-              $("#c_information").html('Tu Mensaje ha sido enviado Correctamente');                   
+              $("#c_information").html('"res.b"');                   
               $("#formulario_contacto").trigger("reset");    
    
             }  else {                                       
