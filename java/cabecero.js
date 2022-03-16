@@ -159,14 +159,14 @@ function reveal() {
   console.log(data[0].b);
                     $('form')[0].reset(); 
                     $("#c_enviar").val("Enviar Mensaje");
-                    $("#c_information p").html();
+                    $("#c_information p").html(data);
                     
                     $("#c_information").css({
                                             "background-color": "#DFF2BF",
                                             "color": "#4F8A10",
                                             
                     });				
-                    $("#c_information").text( "hola" );
+                    $("#c_information").text( data.a );
                     $("#c_information").fadeIn('slow');
                     
   
@@ -180,7 +180,7 @@ function reveal() {
             if(res.a == "1"){
                       
               // Mostramos el mensaje 'Tu Mensaje ha sido enviado Correctamente !' 
-              $("#c_information").html("res.b");                   
+              $("#c_information").html('Tu Mensaje ha sido enviado Correctamente');                   
               $("#formulario_contacto").trigger("reset");    
    
             }  else {                                       
