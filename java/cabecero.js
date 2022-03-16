@@ -149,7 +149,7 @@ function reveal() {
              beforeSend: function (data) {
                     console.log(datos);
                     $("#c_enviar").val("Enviando...");
-                    $("#c_information p").html("hola");
+                    $("#c_information p").html(data);
   
              },
   
@@ -159,7 +159,7 @@ function reveal() {
   console.log(data[0].b);
                     $('form')[0].reset(); 
                     $("#c_enviar").val("Enviar Mensaje");
-                    $("#c_information p").html("hola2");
+                    $("#c_information p").html("Mensaje enviado correctamente");
                     
                     $("#c_information").css({
                                             "background-color": "#DFF2BF",
